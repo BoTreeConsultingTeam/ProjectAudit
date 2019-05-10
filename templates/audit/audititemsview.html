@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block content %}
+<div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-time"></i></span>
+            <h5>Project List</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>Audit report</th>
+                  <th>Checklist Name</th>
+                  <th>Date</th>
+                  <th>Comment</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in x %}
+                <tr>
+                  <td class="taskDesc">{{item.audit.audit_title}}</td>
+                  <td class="taskDesc">{{item.checklist.checklist_title}}</td>
+                  <td class="taskDesc">{{item.date}}</td>
+                  <td class="taskDesc">{{item.comment}}</td>
+                  <td class="taskDesc">{{item.rating}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block content %}
+<div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-time"></i></span>
+            <h5>User List</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>UserName</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Opts</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for user in user_list%}
+                <tr>
+                  <td class="taskDesc">{{user.username}}</td>
+                  <td class="taskDesc">{{user.first_name}}</td>
+                  <td class="taskDesc">{{user.last_name}}</td>
+                  <td class="taskOptions">
+                    <a href="{% url 'userupdate' user.id%}" class="tip-top" data-original-title="Update"><i class="icon-pencil"></i></a> 
+                    <a href="{% url 'userdelete' user.id%}" class="tip-top" data-original-title="Delete"><i class="icon-remove"></i></a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+{% endblock %}

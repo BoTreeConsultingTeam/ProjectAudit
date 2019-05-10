@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>User Creation</h2>
+	<div class="widget-box">
+        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          <h5>Personal-info</h5>
+        </div>
+        <div class="widget-content nopadding">
+
+		  	<form method="post" enctype="multipart/form-data" class="form-horizontal">
+		    {% csrf_token %}
+
+
+            <div class="control-group">
+              <label class="control-label">First Name :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="First name" name="first_name" />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Last Name :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="Last name" name="last_name"/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Technology :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="Technology" name="technology" />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Designation</label>
+              <div class="controls">
+                <select>
+                  <option>Tech Lead</option>
+                  <option>Developer</option>
+                  <option>Q/A</option>
+                  <option>UI Designer</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">User Name :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="User name" name="username" />
+              </div>
+            </div>
+            <div class="control-group">
+              <label for="normal" class="control-label">Phone field + ext.</label>
+              <div class="controls">
+                <input type="text" id="mask-phoneInt" class="span8 mask text" name="phone">
+                <span class="help-block blue span8">+91 999 999 9999</span> </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Email :</label>
+              <div class="controls">
+                <input type="email" class="span11" placeholder="User name" name="email" />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Password input</label>
+              <div class="controls">
+                <input type="password"  class="span11" placeholder="Enter Password" name="password1" />
+                {% if field.help_text %}
+                <small style="color: grey">{{ field.help_text }}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+                {% endfor %}
+                </p>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Confirm Password</label>
+              <div class="controls">
+                <input type="password"  class="span11" placeholder="Enter Password" name="password2" />
+                {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+                {% endfor %}
+                </p>
+              </div>
+            </div>            
+            <div class="form-actions">
+              <button type="submit" class="btn btn-success">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+  </form>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+    <div class="widget-box">
+        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          <h5>Personal-info</h5>
+        </div>
+        <div class="widget-content nopadding">
+                <form method="post" class="form-horizontal">
+                    {% csrf_token %}
+                    {% for non_field_error in form.non_field_errors %}
+                        <p class="help is-danger">{{ non_field_error }}</p>
+                    {% endfor %}
+
+                    {% for field in form %}
+                        <div class="control-group">
+                            <label for="{{ field.id_for_label }}" class="control-label">{{ field.html_name }}</label>
+                            <div class="controls">
+                            {{ field }}
+                            
+                            {% for error in field.errors %}
+                            <p class="help is-danger">{{ error }}</p>
+                            {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="control-group">
+                        <div class="controls" style="width: 80%">
+                    <table class="table table-striped table-bordered" border="0">
+                    <thead>
+                    <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Rating</th>
+                    </tr>
+                    </thead>
+                    <tbody>{% for item in checklist%}
+                    <tr>
+                      <td class="taskDesc">{{item.checklist_title}}</td>
+                      <td class="taskDesc">
+                        <input type="text" class="span11" name="comment-{{item.id}}" placeholder="comment" />
+                      </td>      
+                      <td class="taskDesc" style="width: 100px;">
+                        <select name="rating-{{item.id}}">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                        </select>
+                      
+                      </td>                
+                    </tr>{% endfor %}
+                    </tbody>
+                    </table>
+                    </div>
+                    </div>                    
+                    <div class="form-actions">
+                    <input type="submit" value="SUBMIT" class="button is-primary">
+                    </div>
+                </form>
+        </div>
+    </div>
+
+{% endblock %}

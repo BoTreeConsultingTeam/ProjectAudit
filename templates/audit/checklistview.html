@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block content %}
+<div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-time"></i></span>
+            <h5>Project List</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>Group</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Weightage</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for user in user_list%}
+                <tr>
+                  <td class="taskDesc">{{user.group}}</td>
+                  <td class="taskDesc">{{user.checklist_title}}</td>
+                  <td class="taskDesc">{{user.description}}</td>
+                  <td class="taskDesc">{{user.weightage}}</td>
+                  <td class="taskOptions">
+                    <a href="{% url 'checklistupdate' user.id%}" class="tip-top" data-original-title="Update"><i class="icon-pencil"></i></a> 
+                    <a href="{% url 'checklistdelete' user.id%}" class="tip-top" data-original-title="Delete"><i class="icon-remove"></i></a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block content %}
+<div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-time"></i></span>
+            <h5>Project List</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Project</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Average Rating</th>
+                  <th>General Comment</th>
+                  <th>Detail Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for user in user_list%}
+                <tr>
+                  <td class="taskDesc">{{user.audit_title}}</td>
+                  <td class="taskDesc">{{user.project.title}}</td>
+                  <td class="taskDesc">{{user.date}}</td>
+                  <td class="taskDesc">{{user.status}}</td>
+                  <td class="taskDesc">{{user.average_rating}}</td>
+                  <td class="taskDesc">{{user.general_comment}}</td>
+                  <td class="taskOptions">
+                    <a  href="/audit/audititemsview?id={{user.id}}" class="tip-top" data-original-title="Detail"><i class="icon-pencil"></i></a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+{% endblock %}

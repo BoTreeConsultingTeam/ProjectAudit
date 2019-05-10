@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block content %}
+<div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-time"></i></span>
+            <h5>Project List</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Abstract</th>
+                  <th>Team Lead</th>
+                  <th>Team Size</th>
+                  <th>Technology Stack</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for user in user_list%}
+                <tr>
+                  <td class="taskDesc">{{user.title}}</td>
+                  <td class="taskDesc">{{user.abstract}}</td>
+                  <td class="taskDesc">{{user.team_lead.username}}</td>
+                  <td class="taskDesc">{{user.team_size}}</td>
+                  <td class="taskDesc">{{user.technology_stack}}</td>
+                  <td class="taskDesc">{{user.start_date}}</td>
+                  <td class="taskDesc">{{user.end_date}}</td>
+                  <td class="taskOptions">
+                    <a href="{% url 'projectupdate' user.id%}" class="tip-top" data-original-title="Update"><i class="icon-pencil"></i></a> 
+                    <a href="{% url 'projectdelete' user.id%}" class="tip-top" data-original-title="Delete"><i class="icon-remove"></i></a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+{% endblock %}
