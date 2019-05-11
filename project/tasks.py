@@ -9,7 +9,7 @@ from celery import shared_task
 @shared_task
 def mails(sender):
     subject = 'Project assigned'
-    message = 'Hi '+str(sender['username'])+" \nYou have been "+str(sender['title'])+" \n And project details "+str(sender['abstract'])
+    message = 'Hi '+str(sender['username'])+" \nYou have been assigned a Project named "+str(sender['title'])+" \n Project details are as: "+str(sender['abstract'])
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [sender['email']]
     send_mail( subject, message, email_from, recipient_list )

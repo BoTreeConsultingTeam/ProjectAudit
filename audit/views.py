@@ -57,8 +57,8 @@ class AuditReportCreate(View):
 	def get(self, request):
 		form = AuditForm()
 		sub_form = ChecklistForm(prefix="check")
-		checklist=Process_Checklist.objects.all()
-		return render(request, 'audit/auditreport.html', {'form': form, 'checklist': checklist, 'sub_form': sub_form})
+		group=Process_Checklist.objects.all().values('group').distinct()
+		return render(request, 'audit/auditreport.html', {'form': form, 'checklist': checklist, 'group': group, 'sub_form': sub_form})
 	def post(self, request):
 		if request.method == 'POST':
 			try:
