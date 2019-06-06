@@ -29,7 +29,7 @@ class Audits(models.Model):
 
 class Audit_Items(models.Model):
 	checklist = models.ForeignKey(Process_Checklist,on_delete=models.CASCADE)
-	comment = models.CharField(max_length=255)
+	comment = models.TextField()
 	rating = models.IntegerField(default=0)
 	audit = models.ForeignKey(Audits,on_delete=models.CASCADE)
 	date = models.DateField(auto_now=True)

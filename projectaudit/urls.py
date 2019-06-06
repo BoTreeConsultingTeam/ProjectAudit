@@ -24,7 +24,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
-	path('user/', include('user.user_urls')),
+	path('', user_views.UserListView.as_view(), name='home'),
+    path('user/', include('user.user_urls')),
 	path('project/', include('project.project_urls')),
     path('audit/', include('audit.audit_urls')),
 	path('logout/', auth_views.LogoutView.as_view(), {'next_page': 'login'}, name='logout'),

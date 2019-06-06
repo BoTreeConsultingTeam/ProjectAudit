@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .models import Process_Checklist, Audits, Audit_Items
 from django.core.exceptions import ValidationError
 from project.models import Project
+from .audit_forms import *
 
 class Process_Checklist_Entry(forms.ModelForm):
 	description=forms.CharField( widget=forms.Textarea )
@@ -36,6 +37,9 @@ class AuditForm(forms.ModelForm):
 		'status': forms.Select(attrs={'required': True}),
 		'date': forms.DateInput(attrs={'class': 'datepicker span11','required': True}),
 		}
+
+class MixForm(AuditForm, Process_Checklist_Entry, forms.ModelForm):
+	pass
 
 class ChecklistForm(forms.ModelForm):
 

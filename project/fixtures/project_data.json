@@ -1,0 +1,226 @@
+[
+  {
+    "fields": {
+      "abstract": "sakdnaknkjndsj",
+      "end_date": "2019-05-31",
+      "git_hub_link": "http://www.cs.com",
+      "start_date": "2011-05-01",
+      "team_lead": 4,
+      "team_size": 4,
+      "technology_stack": "naskn\r\ndnkandk\r\ndnask",
+      "title": "xyz"
+    },
+    "model": "project.project",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "abstract": "lsdnfsldfndslnvlnl",
+      "end_date": "2019-05-13",
+      "git_hub_link": "https://www.csc.com",
+      "start_date": "2019-05-24",
+      "team_lead": 4,
+      "team_size": 0,
+      "technology_stack": "dsnlkvnskl",
+      "title": "asklda"
+    },
+    "model": "project.project",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "abstract": "djakdjlk",
+      "end_date": "2019-05-18",
+      "git_hub_link": "https://asdas.com",
+      "start_date": "2019-05-16",
+      "team_lead": 4,
+      "team_size": 2,
+      "technology_stack": "fsdjklvjkndcnncnvlvnv \r\nasdjf;\r\nasdfnk",
+      "title": "adkal"
+    },
+    "model": "project.project",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "abstract": "askdhj",
+      "end_date": "2019-05-10",
+      "git_hub_link": "http://www.cs.com",
+      "start_date": "2019-05-10",
+      "team_lead": 16,
+      "team_size": 2,
+      "technology_stack": "nnkjnjk",
+      "title": "Project_Audit"
+    },
+    "model": "project.project",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "abstract": "Hi",
+      "end_date": "2019-05-10",
+      "git_hub_link": "http://www.cs.com",
+      "start_date": "2019-05-10",
+      "team_lead": 16,
+      "team_size": 5,
+      "technology_stack": "asdh",
+      "title": "Hi"
+    },
+    "model": "project.project",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "date_joined": "2019-05-06T09:17:14.307Z",
+      "designation": "Admin",
+      "email": "binoyoza.bo@gmail.com",
+      "first_name": "Binoy",
+      "groups": [],
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "last_login": "2019-05-27T06:58:57.788Z",
+      "last_name": "Oza",
+      "password": "pbkdf2_sha256$150000$eNCSSbxIyHPh$LvJ0ymC/gwBGIpXhez3hwPqVnnXPOXmkGEYPvn7rIAY=",
+      "phone": "7600411922",
+      "technology": "Python",
+      "user_permissions": [],
+      "username": "Binoy",
+      "year_of_exp": 0
+    },
+    "model": "user.customuser",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "date_joined": "2019-05-06T10:40:19.434Z",
+      "designation": "Tech Lead",
+      "email": "meet@abc.com",
+      "first_name": "Meet",
+      "groups": [],
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "last_name": "Parikh",
+      "password": "meet",
+      "phone": "1234567890",
+      "technology": ".Net",
+      "user_permissions": [],
+      "username": "meet",
+      "year_of_exp": 0
+    },
+    "model": "user.customuser",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "date_joined": "2019-05-06T11:07:06.236Z",
+      "designation": "Tech Lead",
+      "email": "asd@gmail.com",
+      "first_name": "Abc",
+      "groups": [],
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "last_name": "qwe",
+      "password": "",
+      "phone": "5555555555",
+      "technology": "qwe",
+      "user_permissions": [],
+      "username": "qwerty",
+      "year_of_exp": 0
+    },
+    "model": "user.customuser",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "date_joined": "2019-05-06T11:26:43.386Z",
+      "designation": "Tech Lead",
+      "email": "zxc@asd.com",
+      "first_name": "zxc",
+      "groups": [],
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": "2019-05-06T11:27:37.278Z",
+      "last_name": "zxc",
+      "password": "pbkdf2_sha256$150000$MQPzuSoz3Hz4$UB0rbtxONPFf2msxjNh2WDO84XVgddbuSrRMFpCd/x0=",
+      "phone": "9898999898",
+      "technology": "qwwe",
+      "user_permissions": [],
+      "username": "zxc",
+      "year_of_exp": 0
+    },
+    "model": "user.customuser",
+    "pk": 7
+  },
+  {
+    "fields": {
+      "date_joined": "2019-05-10T08:45:39.573Z",
+      "designation": "Tech Lead",
+      "email": "binoyoza.bo@gmail.com",
+      "first_name": "ANuj",
+      "groups": [],
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "last_name": "SHarma",
+      "password": "pbkdf2_sha256$150000$gZtDWX8gvl6C$Sa8Apr94tUTARk8Eunjw6VouMJmELvQaH7XocVLO3UI=",
+      "phone": "7600411922",
+      "technology": "Python",
+      "user_permissions": [],
+      "username": "Anuj",
+      "year_of_exp": 1
+    },
+    "model": "user.customuser",
+    "pk": 16
+  },
+  {
+    "fields": {
+      "date_joined": "2019-05-10T10:56:37.387Z",
+      "designation": "Tech Lead",
+      "email": "nipun@gmail.com",
+      "first_name": "Nipun",
+      "groups": [],
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "last_name": "Brahmbhatt",
+      "password": "pbkdf2_sha256$150000$dA7j5ueiwDVm$DT6HQQTDpJUAjFU4iGcTm6pLkkYzCmpr7aTDARjGKw4=",
+      "phone": "1234567890",
+      "technology": "Python, Android",
+      "user_permissions": [],
+      "username": "Nipun",
+      "year_of_exp": 5
+    },
+    "model": "user.customuser",
+    "pk": 17
+  },
+  {
+    "fields": {
+      "date_joined": "2019-05-10T14:02:44.413Z",
+      "designation": "Tech Lead",
+      "email": "binoyoza.bo@gmail.com",
+      "first_name": "Yogi",
+      "groups": [],
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "last_name": "Katewa",
+      "password": "pbkdf2_sha256$150000$HjcfYNtCfcrS$hBv8ExCCAHZ8D6HInYE0bLTib6rulXYs1noheJnnBI0=",
+      "phone": "7600411922",
+      "technology": "Python",
+      "user_permissions": [],
+      "username": "Yogi",
+      "year_of_exp": 2
+    },
+    "model": "user.customuser",
+    "pk": 20
+  }
+]

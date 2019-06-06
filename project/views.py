@@ -20,7 +20,7 @@ class ProjectReg(View):
 			form = RegisterUserForm(request.POST)
 			#print(form, "hi")
 			if form.is_valid():
-				print("hi")
+				#print("hi")
 				#print(str(request.POST['thumb']))
 				#print(form.save().query())
 				form.save()
@@ -29,7 +29,7 @@ class ProjectReg(View):
 				sender['email']=str(CustomUser.objects.get(id=request.POST['team_lead']).email)
 				sender['username'] = str(CustomUser.objects.get(id=request.POST['team_lead']).username)
 				sender['abstract']=str(request.POST['abstract'])
-				print('email',sender)
+				#print('email',sender)
 				mails.delay(sender)
 				return redirect('projectlist')
 				#return render(request, 'signup/userlistview.html')
@@ -43,7 +43,7 @@ class ProjectListView(LoginRequiredMixin,generic.ListView):
 	context_object_name = 'user_list'
 	
 	def get_queryset(self):
-		print(Project.objects.all())
+		#print(Project.objects.all())
 		return Project.objects.all()
 
 class ProjectUpdate(LoginRequiredMixin,UpdateView):
